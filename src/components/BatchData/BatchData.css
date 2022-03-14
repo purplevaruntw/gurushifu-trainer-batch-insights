@@ -1,9 +1,9 @@
-.progress-status{
-    display: flex;
-    flex-direction: row;
+.progress-status {
+	display: flex;
+	flex-direction: row;
 }
-.progress-status-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.progress-status-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
