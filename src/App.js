@@ -7,19 +7,22 @@ import BatchData from "./components/BatchData/BatchData";
 
 function App() {
 	const [data, setData] = useState(null);
+	const [showButton, setShowButton] = useState(true)
 	const getData = async () => {
 		const url = config.API.batchInsights;
 		const { data } = await axios.get(url);
 		setData(data);
+		console.log(data);
 	};
 	const showBatchInsights = () => {
 		getData();
-		console.log(data);
+		setShowButton(false);
+		
 	};
 
 	return (
 		<div className="App">
-			<Button value="Batch Insights" onClickFunction={showBatchInsights} />
+			{showButton && <Button value="Batch Insights" onClickFunction={showBatchInsights} />}
 			{data ? <BatchData data={data.body.Items} /> : ""}
 		</div>
 	);

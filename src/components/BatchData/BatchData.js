@@ -1,24 +1,30 @@
 import React, { useEffect } from "react";
-
+import "./BatchData.css"
 const BatchData = ({ data }) => {
-	useEffect(() => {});
+	const displayProgress = (progress) =>{
+		return <h1>{progress.completionStatus}</h1>
+		if (progress.projectName==="trainingCamp"){
+
+		}
+		else {
+
+		}
+	}
 	return (
-		<div>
-			<h1>batch data</h1>
-			{data.map((val, idx) => {
+		<div >
+			<h1>Progress Status</h1>
+			<hr/>
+		<div className="progress-status-container">
+
+		{data.map((val, idx) => {
 				return (
-					<div>
-						<h1>email = {val.emailId}</h1>
-						<h1>
-							training camp ={" "}
-							{
-								val.progressResponse[val.progressResponse.length - 1]
-									.projectName
-							}
-						</h1>
+					<div key={idx} className="progress-status">
+						{displayProgress(val.progressResponse[val.progressResponse.length - 1])}
+
 					</div>
 				);
 			})}
+		</div>
 		</div>
 	);
 };
