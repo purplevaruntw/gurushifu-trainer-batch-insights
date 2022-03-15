@@ -22,14 +22,13 @@ const BatchData = ({ data }) => {
 		});
 		return count;
 	};
+	var counter = {};
 	const displayProgress = (progress) => {
 		const fullName = getFullName(progress);
 		const count = getCount(fullName);
-		return (
-			<h3>
-				{fullName} and {count}{" "}
-			</h3>
-		);
+		if (counter[fullName]) return;
+		counter[fullName] = count;
+		console.log(counter);
 	};
 	return (
 		<div>
@@ -46,6 +45,13 @@ const BatchData = ({ data }) => {
 								val
 							)}
 						</div>
+					);
+				})}
+				{Object.keys(counter).map((i, j) => {
+					return (
+						<p key={i}>
+							{i} , count = {j}
+						</p>
 					);
 				})}
 			</div>
