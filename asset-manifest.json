@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gurushifu-trainer-batch-insights/static/css/main.478e863a.css",
+    "main.js": "/gurushifu-trainer-batch-insights/static/js/main.d97e91af.js",
+    "static/js/787.cdc11dda.chunk.js": "/gurushifu-trainer-batch-insights/static/js/787.cdc11dda.chunk.js",
+    "index.html": "/gurushifu-trainer-batch-insights/index.html",
+    "main.478e863a.css.map": "/gurushifu-trainer-batch-insights/static/css/main.478e863a.css.map",
+    "main.d97e91af.js.map": "/gurushifu-trainer-batch-insights/static/js/main.d97e91af.js.map",
+    "787.cdc11dda.chunk.js.map": "/gurushifu-trainer-batch-insights/static/js/787.cdc11dda.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.478e863a.css",
+    "static/js/main.d97e91af.js"
+  ]
+}
