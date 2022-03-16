@@ -1,4 +1,5 @@
 import React from "react";
+import TableRow from "../TableRow/TableRow";
 import "./BatchData.css";
 const BatchData = ({ data }) => {
 	const getFullName = (progress) => {
@@ -22,13 +23,15 @@ const BatchData = ({ data }) => {
 		});
 		return count;
 	};
-	var counter = {};
+	var counter = new Map();
 	const displayProgress = (progress) => {
 		const fullName = getFullName(progress);
 		const count = getCount(fullName);
 		if (counter[fullName]) return;
-		counter[fullName] = count;
-		console.log(counter);
+
+		counter.set(fullName, count);
+		counter = new Map([...counter].sort());
+		console.log("counter obj = ", counter);
 	};
 	return (
 		<div>
@@ -45,13 +48,6 @@ const BatchData = ({ data }) => {
 								val
 							)}
 						</div>
-					);
-				})}
-				{Object.keys(counter).map((i, j) => {
-					return (
-						<p key={i}>
-							{i} , count = {j}
-						</p>
 					);
 				})}
 			</div>
