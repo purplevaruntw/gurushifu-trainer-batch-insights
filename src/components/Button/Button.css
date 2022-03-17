@@ -1,12 +1,11 @@
 .clickable {
 	float: right;
-  font-weight: lighter;
-  border-bottom: 4px solid #089b88;
-  padding-bottom: 10px;
-  font-size: larger;
-  cursor: pointer;
+	border-bottom: 4px solid #089b88;
+	padding-bottom: 10px;
+	font-size: 30px;
+	cursor: pointer;
 }
 .clickable:hover {
 	cursor: pointer;
-  font-weight: bolder;
+	font-weight: bolder;
 }

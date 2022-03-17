@@ -11,22 +11,36 @@ import "./BatchData.css";
 const BatchData = ({ data }) => {
 	return (
 		<>
-
-			<h2>Progress Status</h2>
+			<p style={{ fontWeight: "bolder", fontSize: "30px" }}>
+				Progress Status
+			</p>
 			<Paper className="paper">
-
 				<TableContainer className="table-container">
 					<Table stickyHeader aria-label="sticky table">
 						<TableHead>
 							<TableRow>
-								<TableCell>Exercise</TableCell>
-								<TableCell align="right">Count</TableCell>
+								<TableCell>
+									<span style={{ fontWeight: "bolder" }}>
+										Exercise
+									</span>
+								</TableCell>
+								<TableCell align="right">
+									<span style={{ fontWeight: "bolder" }}>
+										Count
+									</span>
+								</TableCell>
 							</TableRow>
 						</TableHead>
 						<TableBody className="table">
 							{Object.keys(data).map((val, key) => {
-							return <TableRowCustom key={key} name={val} count={data[val]} />;
-						})}
+								return (
+									<TableRowCustom
+										key={key}
+										name={val}
+										count={data[val]}
+									/>
+								);
+							})}
 						</TableBody>
 					</Table>
 				</TableContainer>
