@@ -4,6 +4,7 @@ import config from "./api/config";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import BatchData from "./components/BatchData/BatchData";
+import Header from "./components/Header/Header";
 
 function App() {
 	const [data, setData] = useState(null);
@@ -22,6 +23,7 @@ function App() {
 	});
 	return (
 		<div className="App">
+			<Header />
 			{showButton && (
 				<Button
 					value="Batch Insights"
