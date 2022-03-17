@@ -1,11 +1,12 @@
-button {
-	margin-top: 100px;
-	font-size: 40px;
-	padding: 20px;
-	background: none;
-	border-radius: 9px;
-	border: 4px solid black;
+.clickable {
+	float: right;
+  font-weight: lighter;
+  border-bottom: 4px solid #089b88;
+  padding-bottom: 10px;
+  font-size: larger;
+  cursor: pointer;
 }
-button:hover {
-	border: 4px solid gold;
+.clickable:hover {
+	cursor: pointer;
+  font-weight: bolder;
 }

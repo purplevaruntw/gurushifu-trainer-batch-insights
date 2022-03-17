@@ -3,13 +3,14 @@ import "./Button.css";
 
 const Button = ({ value, onClickFunction }) => {
 	return (
-		<button
+		<span
 			value={value}
 			onClick={onClickFunction}
 			data-testid="batch-insights-btn"
+			className="clickable"
 		>
 			{value}
-		</button>
+		</span>
 	);
 };
 
